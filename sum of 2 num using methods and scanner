@@ -1,0 +1,30 @@
+package gnaneswar;
+import java.util.*;
+class projector{
+	public  void light(int a, int b) {
+		int c=a+b;
+		System.out.print("a+b=");
+		System.out.println(c);
+	}
+	
+	
+}
+public class second 
+{
+
+	public static void main(String[] args) 
+	{
+		
+		int a,b;
+		System.out.println("enter a,b values");
+		Scanner km=new Scanner(System.in);
+		a=km.nextInt();
+		b=km.nextInt();
+		projector l =new projector();
+		l.light(a, b);
+		
+		
+
+	}
+
+}
