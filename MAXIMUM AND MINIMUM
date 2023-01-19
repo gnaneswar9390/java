@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+class any
+{
+	public static void main(String args[])
+	{
+		Scanner SC=new Scanner(System.in);
+		int n;
+		System.out.println("enter array value");
+		n=SC.nextInt();
+		int a[]=new int[n];
+		int i=0,maximum,minimum;
+		
+		System.out.println("enter values of array");
+		for(i=0;i<a.length;i++)
+		{
+		a[i]=SC.nextInt();
+		}
+		maximum=a[0];
+		minimum=a[0];
+		for(i=0;i<a.length;i++)
+		{
+			if(a[i]>maximum)
+			{
+				maximum=a[i];
+			}
+			if(a[i]<minimum)
+			{
+				minimum=a[i];
+			}
+		}
+		System.out.println("minimum="+maximum);
+		System.out.println("minimum="+minimum);
+			
+	}
+}
