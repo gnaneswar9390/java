@@ -1,0 +1,158 @@
+package gnani;
+import java.util.Scanner;
+class Menu_triven
+{
+	public void isPalindrome(int n)
+	{
+		int z,r,x=0;
+		Scanner a=new Scanner(System.in);
+		System.out.println("enter number to check palindrome or not");
+		n=a.nextInt();
+		z=n;
+		while(n>0)
+		{
+			r=n%10;
+			x=x*10+r;
+			n=n/10;
+		}
+		if(x==z)
+			System.out.println("PALINDROME");
+		else
+			System.out.println("NOT A PALINDROME");
+	}
+	public void isarmStrong(int n)
+	{
+		int z,r,x=0;
+		z=n;
+		Scanner b=new Scanner(System.in);
+		System.out.println("enter number to check armstrong or not");
+		n=b.nextInt();
+		while(n>0)
+		{
+			r=n%10;
+			x=x+r*r*r;
+			n=n/10;
+		}
+		if(x==z)
+			System.out.println("ARMSTRONG");
+		else
+			System.out.println("NOT ARMSTRONG");
+	}
+	public int factorial(int n)
+	{
+		int i,fact=1;
+		for(i=0;i<=n;i++)
+			fact=fact*i;
+		return fact;
+	}
+	public void isStrong(int n)
+	{
+		int z,r,sum=0;
+		
+		Scanner c=new Scanner(System.in);
+		System.out.println("enter number to check strong or not");
+		n=c.nextInt();
+		z=n;
+		while(n>0)
+		{
+			r=n%10;
+			sum=sum*n;
+			n=n/10;
+		}
+		if(sum==z)
+			System.out.println("STRONG NUMBER");
+		else
+			System.out.println("NOT A STRONG NUMBER");
+	}
+	public void displayFibonacii(int n)
+	{
+		int p=0,q=1,r;
+		System.out.println(p+" "+q);
+		for(int i=2;i<=n;i++)
+		{
+			r=p+q;
+			System.out.println(n);
+			p=q;
+			q=r;
+		}
+	}
+	public void isPerfect(int n)
+	{
+		int s=0;
+		Scanner e=new Scanner(System.in);
+		System.out.println("enter number to check perfect or not ");
+		n=e.nextInt();
+		for(int i=0;i<n;i++)
+		{
+			if(n%i==0)
+				s=s+i;
+		}
+		if(s== n)
+	       System.out.println("PERFECT NUMBER");
+	    else
+	    	System.out.println("NOT A PERFECT NUMBER");
+	}
+	public void isPrime(int n)
+	{
+		int i,count=0;
+		Scanner f=new Scanner(System.in);
+		n=f.nextInt();
+		for(i = 1;i<=n;i++) 
+		{ 
+			if(n%i == 0) 
+				count=count+1;
+	    else if(count>2) 
+	      System.out.println("NOT A PRIME");
+	    else
+	        System.out.println("PRIME");
+	}
+}
+
+}
+
+class Main1for_menu 
+{
+	public static void main(String args[]) {
+	Menu_triven k=new Menu_triven();
+	int n;
+	Scanner s=new Scanner(System.in);
+	while(true) {
+	System.out.println("enter your choice");
+	System.out.println("1.palindrome\n"
+			+ "2.armstrong\n"
+			+ "3.factorial\n"
+			+ "4.strong\n"
+			+ "fibinocci\n"
+			+ "5.perfect\n"
+			+ "6.prime\n"
+			+ "7.exit");
+	n=s.nextInt();
+	switch(n) {
+	case 1:
+	       k.isPalindrome(n);
+	       break;
+	case 2:
+		   k.isarmStrong(n);
+		   break;
+	case 3:
+		k.factorial(n);
+		break;
+	case 4:
+		 k.isStrong(n);
+		 break;
+	case 5:
+		k.isPerfect(n);
+		break;
+	case 6: 
+		k.isPrime(n);
+		break;
+	case 7:
+		System.exit(0);
+		break;
+	default :
+		System.out.println("INVALID SELECTION");
+		
+	}
+	}
+	}	
+}
